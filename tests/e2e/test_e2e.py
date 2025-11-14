@@ -14,7 +14,7 @@ def test_hello_world(page, fastapi_server):
     that the server is running and serving the correct template.
     """
     # Navigate the browser to the homepage URL of the FastAPI application.
-    page.goto('http://localhost:8000')
+    page.goto('http://127.0.0.1:8000')
     
     # Use an assertion to check that the text within the first <h1> tag is exactly "Hello World".
     # If the text does not match, the test will fail.
@@ -30,7 +30,7 @@ def test_calculator_add(page, fastapi_server):
     that the result displayed is correct.
     """
     # Navigate the browser to the homepage URL of the FastAPI application.
-    page.goto('http://localhost:8000')
+    page.goto('http://127.0.0.1:8000')
     
     # Fill in the first number input field (with id 'a') with the value '10'.
     page.fill('#a', '10')
@@ -56,7 +56,7 @@ def test_calculator_divide_by_zero(page, fastapi_server):
     operations and provides meaningful feedback to the user.
     """
     # Navigate the browser to the homepage URL of the FastAPI application.
-    page.goto('http://localhost:8000')
+    page.goto('http://127.0.0.1:8000')
     
     # Fill in the first number input field (with id 'a') with the value '10'.
     page.fill('#a', '10')

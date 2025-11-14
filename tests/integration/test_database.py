@@ -12,7 +12,7 @@ DATABASE_MODULE = "app.database"
 @pytest.fixture
 def mock_settings(monkeypatch):
     """Fixture to mock the settings.DATABASE_URL before app.database is imported."""
-    mock_url = "postgresql://user:password@localhost:5432/test_db"
+    mock_url = "postgresql://user:password@127.0.0.1:5432/test_db"
     mock_settings = MagicMock()
     mock_settings.DATABASE_URL = mock_url
     # Ensure 'app.database' is not loaded
